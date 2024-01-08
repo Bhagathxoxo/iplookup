@@ -1,14 +1,14 @@
 # iplookup
 
-Run the bat file to look up your ip details like Dynamic IP, Courntry, City, Region, Hostname and more
+Run the bat file to look up your IP details, like dynamic IP, country, city, region, hostname, and more.
 
 *********************************************
-**IP_Lookup.bat** : to view your IP details
+**IP_Lookup.bat** : To view your IP details
 
-**IP_Lookup_Save_Info.bat** : To save your IP details as a *text file*
+**IP_Lookup_Save_Info.bat** : To save your IP details as a *text file*
 
 *********************************************
-Works same as
+It works the same as 
 Whatismyip.com and whatismyipaddress.com
 
 Gathers information from:
