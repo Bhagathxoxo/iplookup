@@ -1,20 +1,21 @@
-# iplookup
+# Public IP Lookup Script
 
-Run the bat file to look up your IP details, like dynamic IP, country, city, region, hostname, and more.
+A simple Windows batch script to retrieve your **public IP** using OpenDNS. Minimal external requests; no additional system or location information is exposed.
 
-*********************************************
-**IP_Lookup.bat** : To view your IP details
+## Features
+- Fetch your **public IP** using a DNS query.
+- Lightweight and works entirely in **Command Prompt**.
+- Safe: only your IP is sent to the DNS server, no HTTP headers or system metadata.
 
-**IP_Lookup_Save_Info.bat** : To save your IP details as a *text file*
+## Usage
+1. Clone or download the repository.
+2. Run `iplookup.bat` in **Command Prompt**.
+3. Your public IP will be displayed.
 
-*********************************************
-It works the same as 
-Whatismyip.com and whatismyipaddress.com
+## Notes
+- This script uses the OpenDNS resolver `resolver1.opendns.com` to determine your public IP.
+- No local system info, location, or ISP data is shown.
+- For full IP details (ISP, country), a separate HTTP-based API would be required.
 
-Gathers information from:
-
-[ipconfig.io](https://ipconfig.io/)
-
-[ipinfo.io](https://ipinfo.io/)
-
-*for personal use only*
+## License
+MIT
