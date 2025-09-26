@@ -1,25 +1,11 @@
 @echo off
-TITLE ip lookup
-REM https://github.com/Bhagathxoxo/iplookup
-ECHO:
-ECHO:
-ECHO:******START********
-ECHO "Your IP address":
-curl ipconfig.io
-curl ipconfig.io/country
-ECHO:
-ECHO:
-ECHO Your Full IP Details:
-curl ipinfo.io/json
-ECHO:
-ECHO:
-ECHO:
-ECHO DATE:
-set mydate=%DATE%
-For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a:%%b)
-echo %mydate%_%mytime% 
-ECHO:
-ECHO:
-ECHO:
-ECHO:******END********
-PAUSE
+setlocal enabledelayedexpansion
+
+set "pubIP="
+for /f "tokens=2 delims=:" %%A in ('nslookup myip.opendns.com resolver1.opendns.com ^| findstr /c:"Address"') do (
+  set "pubIP=%%A"
+)
+for /f "tokens=* delims= " %%B in ("%pubIP%") do set "pubIP=%%B"
+echo Public IP: %pubIP%
+endlocal
+pause
